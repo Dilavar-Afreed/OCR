@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR Chat - Document Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📄 Document Assistant</h1>
+            <p class="subtitle">Ask questions about your ingested documents</p>
+        </div>
+
+        <div class="content">
+            <!-- Upload Section -->
+            <div class="upload-section">
+                <h2>Upload PDF</h2>
+                <form id="uploadForm">
+                    <input type="file" id="fileInput" accept=".pdf" required>
+                    <input type="text" id="collectionInput" placeholder="Collection name (optional)" />
+                    <button type="submit" class="btn-primary">Upload</button>
+                </form>
+                <div id="uploadStatus"></div>
+            </div>
+
+            <!-- Chat Section -->
+            <div class="chat-section">
+                <h2>Chat</h2>
+                <div class="chat-box" id="chatBox"></div>
+                <form id="chatForm" class="chat-input-form">
+                    <input 
+                        type="text" 
+                        id="messageInput" 
+                        placeholder="Ask a question about your documents..."
+                        autocomplete="off"
+                    />
+                    <button type="submit" class="btn-primary">Send</button>
+                </form>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="stats-section">
+                <h2>Database Stats</h2>
+                <button class="btn-secondary" onclick="loadStats()">Refresh Stats</button>
+                <div id="statsContainer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

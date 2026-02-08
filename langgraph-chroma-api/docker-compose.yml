@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  chroma:
+    image: chromadb/chroma:latest
+    container_name: chroma
+    ports:
+      - "8001:8000"
+    volumes:
+      - chroma_data:/chroma/.chroma
+    environment:
+      - IS_PERSISTENT=TRUE
+
+  app:
+    build:
+      context: .
+    container_name: ocr_app
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - CHROMA_HOST=chroma
+      - CHROMA_PORT=8000
+      - CHROMA_COLLECTION_NAME=${CHROMA_COLLECTION_NAME:-OCR_Documents}
+    depends_on:
+      - chroma
+    restart: unless-stopped
+
+volumes:
+  chroma_data:
