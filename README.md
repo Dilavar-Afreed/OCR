@@ -89,7 +89,7 @@ The system uses a multi-agent architecture powered by LangGraph, where agents ca
 
 2. **Create `.env` file** (see [Environment Configuration](#environment-configuration)):
    ```bash
-   cp .env.example .env
+   copy .env.example .env
    ```
    Then edit `.env` and add your OpenAI API key.
 

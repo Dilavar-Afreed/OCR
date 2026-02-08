@@ -70,7 +70,7 @@ document.getElementById('chatForm').addEventListener('submit', async (e) => {
     chatBox.scrollTop = chatBox.scrollHeight;
 
     try {
-        const response = await fetch(`${API_BASE}/ask`, {
+        const response = await fetch(`/ask`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -108,7 +108,7 @@ async function loadStats() {
     const statsContainer = document.getElementById('statsContainer');
 
     try {
-        const response = await fetch(`${API_BASE}/visualize/stats`);
+        const response = await fetch(`/visualize/stats`);
 
         if (!response.ok) {
             throw new Error('Failed to load stats');
