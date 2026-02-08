@@ -84,7 +84,7 @@ The system uses a multi-agent architecture powered by LangGraph, where agents ca
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/Dilavar-Afreed/OCR.git
-   cd langgraph-chroma-api
+   cd OCR
    ```
 
 2. **Create `.env` file** (see [Environment Configuration](#environment-configuration)):
