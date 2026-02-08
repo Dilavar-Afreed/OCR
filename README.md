@@ -435,7 +435,7 @@ The `docker-compose.yml` orchestrates two main services:
 ## Project Structure
 
 ```
-langgraph-chroma-api/
+OCR/
 ├── app/                          # Main application package
 │   ├── main.py                   # FastAPI application & endpoints
 │   ├── agent.py                  # LangGraph agent configuration
