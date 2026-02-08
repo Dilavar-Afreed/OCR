@@ -83,7 +83,7 @@ The system uses a multi-agent architecture powered by LangGraph, where agents ca
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Dilavar-Afreed/OCR.git
    cd langgraph-chroma-api
    ```
 
